@@ -12,23 +12,13 @@
     android:id="@+id/ll">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1º Passo"
-        android:textSize="24dp"
-        android:paddingTop="50dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="Selecionar idade da paciente:"
+        android:textColor="@color/black_overlay"
         android:textSize="24dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textStyle="italic" />
 
     <LinearLayout
         android:clipToPadding="false"
@@ -40,7 +30,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/condutasId"
+            android:id="@+id/botaoMais40"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -75,6 +65,7 @@
                     android:textColor="@android:color/darker_gray"/>
 
             </LinearLayout>
+
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
