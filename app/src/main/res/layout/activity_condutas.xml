@@ -6,19 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.aluno.condutascancermama.MainActivity"
     android:orientation="vertical"
-    android:padding="10dp"
     android:background="#fcfcfc"
     android:gravity="center"
     android:id="@+id/ll">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Selecionar idade da paciente:"
-        android:textColor="@color/black_overlay"
-        android:textSize="24dp"
-        android:textStyle="italic" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="405dp"
+        android:layout_height="187dp"
+        app:srcCompat="@drawable/image1" />
 
     <LinearLayout
         android:clipToPadding="false"
@@ -70,6 +66,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:id="@+id/botaoMenos40"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
