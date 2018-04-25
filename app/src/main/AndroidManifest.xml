@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Condutas" />
         <activity android:name=".CondutasMais40" />
-        <activity android:name=".CondutasMenos40" />
+        <activity android:name=".CondutasMenos40"
+            android:windowSoftInputMode="stateHidden"/>/>
         <activity android:name=".Resultados" />
         <activity android:name=".Fluxogramas" />
         <activity android:name=".FluxogramaResultados" />

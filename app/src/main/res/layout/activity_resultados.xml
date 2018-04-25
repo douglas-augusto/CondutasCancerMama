@@ -26,7 +26,7 @@
 
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="97dp">
 
                 <TextView
@@ -40,7 +40,7 @@
                     android:textStyle="bold|italic" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="35dp"
@@ -57,7 +57,7 @@
 
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="105dp">
                 <TextView
                     android:layout_width="match_parent"
@@ -68,11 +68,12 @@
                     android:textColor="@color/pink"
                     android:textSize="24dp"
                     android:textStyle="bold|italic" />
+
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="326dp"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
                     android:paddingTop="40dp"
+                    android:paddingLeft="10dp"
                     android:text="Marcar uma nova consulta com seis meses."
                     android:textSize="18dp" />
 
@@ -86,7 +87,7 @@
 
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="87dp">
                 <TextView
                     android:layout_width="match_parent"
@@ -99,11 +100,11 @@
                     android:textStyle="bold|italic" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="326dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingTop="40dp"
-                    android:text="Encaminhar para um centro especializado"
+                    android:text="Encaminhar para centro especializado"
                     android:textSize="18dp" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
