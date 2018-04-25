@@ -16,7 +16,7 @@ public class Condutas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_condutas);
 
-        this.setTitle("Selecione a idade da paciente");
+        this.setTitle("Selecione a idade do paciente");
 
         botaoMaisQuarenta = (CardView)findViewById(R.id.botaoMais40);
         botaoMenosQuarenta = (CardView)findViewById(R.id.botaoMenos40);

@@ -63,7 +63,7 @@
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="350dp"
-                android:layout_height="115dp">
+                android:layout_height="105dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -110,9 +110,8 @@
             android:layout_marginTop="60dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:textSize="18dp"
-            android:text="Digite a idade em que o parente do familiar foi diagnosticado com o câncer:"
-            />
+            android:text="Digite a idade em que o familiar do pacinte foi diagnosticado com o câncer:"
+            android:textSize="18dp" />
 
      <EditText
          android:id="@+id/campoIdade"
@@ -135,6 +134,7 @@
 
         <Button
             style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:id="@+id/botaoResultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

@@ -19,7 +19,10 @@
         <activity android:name=".Condutas" />
         <activity android:name=".CondutasMais40" />
         <activity android:name=".CondutasMenos40" />
-        <activity android:name=".Resultados"></activity>
+        <activity android:name=".Resultados" />
+        <activity android:name=".Fluxogramas" />
+        <activity android:name=".FluxogramaResultados" />
+        <activity android:name=".FluxogramaCondutas"></activity>
     </application>
 
 </manifest>
