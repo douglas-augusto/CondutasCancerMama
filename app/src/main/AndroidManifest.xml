@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Condutas" />
-        <activity android:name=".CondutasMais40" />
-        <activity android:name=".CondutasMenos40"
-            android:windowSoftInputMode="stateHidden"/>/>
-        <activity android:name=".Resultados" />
-        <activity android:name=".Fluxogramas" />
-        <activity android:name=".FluxogramaResultados" />
-        <activity android:name=".FluxogramaCondutas"></activity>
+        <activity android:name=".activity.Condutas" />
+        <activity android:name=".activity.CondutasMais40" />
+        <activity
+            android:name=".activity.CondutasMenos40"
+            android:windowSoftInputMode="stateHidden" />
+        />
+        <activity android:name=".activity.Resultados" />
+        <activity android:name=".activity.Fluxogramas" />
+        <activity android:name=".activity.FluxogramaResultados" />
+        <activity android:name=".activity.FluxogramaCondutas" />
+        <activity android:name=".activity.Login"></activity>
     </application>
 
 </manifest>

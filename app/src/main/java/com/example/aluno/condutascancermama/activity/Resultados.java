@@ -1,7 +1,9 @@
-package com.example.aluno.condutascancermama;
+package com.example.aluno.condutascancermama.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.aluno.condutascancermama.R;
 
 public class Resultados extends AppCompatActivity {
 

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "806944578605",
+    "firebase_url": "https://condutascancermama.firebaseio.com",
+    "project_id": "condutascancermama",
+    "storage_bucket": "condutascancermama.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806944578605:android:a6df03e38df8e37e",
+        "android_client_info": {
+          "package_name": "com.example.aluno.condutascancermama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806944578605-htlgmsa0ehfpseebqodtfg5kchtvfn2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aluno.condutascancermama",
+            "certificate_hash": "1c8264671e920578fe5f2d6823eccffe2ba98ae0"
+          }
+        },
+        {
+          "client_id": "806944578605-3qkn2781vuduaoipc82ls90n7p92oo3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBUZSMpJXncwsnzuUYOf-JWHei-QXFcsw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806944578605-3qkn2781vuduaoipc82ls90n7p92oo3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
