@@ -1,4 +1,4 @@
-package com.example.aluno.condutascancermama.activity;
+package com.example.aluno.condutascancermama.activity.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

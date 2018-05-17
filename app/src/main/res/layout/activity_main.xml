@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aluno.condutascancermama.activity.MainActivity"
+    tools:context="com.example.aluno.condutascancermama.activity.activity.MainActivity"
     android:orientation="vertical"
     android:padding="10dp"
     android:background="#fcfcfc"
@@ -144,6 +144,7 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:id="@+id/botaoAcompanhamento"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
