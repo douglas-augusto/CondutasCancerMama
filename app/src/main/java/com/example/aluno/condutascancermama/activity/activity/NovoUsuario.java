@@ -36,10 +36,6 @@ public class NovoUsuario extends AppCompatActivity {
         return autenticacao;
     }
 
-    public void setAutenticacao(FirebaseAuth autenticacao) {
-        this.autenticacao = autenticacao;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +61,7 @@ public class NovoUsuario extends AppCompatActivity {
                     usuario = new Usuario();
                     usuario.setNome(campoNome.getText().toString());
                     usuario.setEmail(campoEmail.getText().toString());
+                    usuario.setSenha(campoSenha.getText().toString());
                     cadastrarUsuario();
                 }
 
@@ -92,7 +89,7 @@ public class NovoUsuario extends AppCompatActivity {
                     usuario.salvar();
 
                     Preferencias preferencias = new Preferencias(NovoUsuario.this);
-                    preferencias.salvarDados(identificadorUsuario);
+                    preferencias.salvarDados(identificadorUsuario, usuario.getNome());
 
                     abrirLoginUsuario();
 

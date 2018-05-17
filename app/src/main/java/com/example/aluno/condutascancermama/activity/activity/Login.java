@@ -21,6 +21,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
@@ -30,6 +34,9 @@ public class Login extends AppCompatActivity {
     private Usuario usuario;
     private FirebaseAuth autenticacao;
     private TextView novoUsuario;
+    private DatabaseReference firebase;
+    private ValueEventListener valueEventListenerUsuario;
+    private String identificadorUsuarioLogado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,38 +88,45 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                if(task.isSuccessful()){
+                if( task.isSuccessful() ){
 
-                    Preferencias preferencias = new Preferencias(Login.this);
-                    String usuarioLogado = Base64Custom.codificarBase64(usuario.getEmail());
-                    preferencias.salvarDados(usuarioLogado);
+
+                    identificadorUsuarioLogado = Base64Custom.codificarBase64(usuario.getEmail());
+
+                    firebase = ConfiguracaoFirebase.getFirebase()
+                            .child("usuarios")
+                            .child( identificadorUsuarioLogado );
+
+                    valueEventListenerUsuario = new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+                            Usuario usuarioRecuperado = dataSnapshot.getValue( Usuario.class );
+
+                            Preferencias preferencias = new Preferencias(Login.this);
+                            preferencias.salvarDados( identificadorUsuarioLogado, usuarioRecuperado.getNome() );
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    };
+
+                    firebase.addListenerForSingleValueEvent( valueEventListenerUsuario );
+
+
 
                     abrirTelaPrincipal();
-
-
+                    Toast.makeText(Login.this, "Sucesso ao fazer login!", Toast.LENGTH_LONG ).show();
                 }else{
-
-                    String erroExcecao = "";
-
-                    try{
-
-                        throw task.getException();
-
-                    } catch (FirebaseAuthInvalidUserException e) {
-                        erroExcecao = "Essa conta de usuário não existe ou está desativada!";
-                    } catch (FirebaseAuthInvalidCredentialsException e) {
-                        erroExcecao = "Verifique seu e-mail e senha!";
-                    } catch (Exception e) {
-                        erroExcecao = "Não foi possível fazer o login!";
-                        e.printStackTrace();
-                    }
-
-                    Toast.makeText(Login.this, "Erro: "+erroExcecao, Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(Login.this, "Erro ao fazer login!", Toast.LENGTH_LONG ).show();
                 }
 
             }
         });
+
     }
 
     private void abrirTelaPrincipal() {
