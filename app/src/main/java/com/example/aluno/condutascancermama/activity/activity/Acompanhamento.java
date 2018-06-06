@@ -19,6 +19,7 @@ public class Acompanhamento extends AppCompatActivity {
 
     private FirebaseAuth usuarioFirebase;
     private CardView botaoNovoPaciente;
+    private CardView botaoVerCadastrados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +31,20 @@ public class Acompanhamento extends AppCompatActivity {
         setTitle("Acompanhamento");
 
        botaoNovoPaciente = findViewById(R.id.botaoNovoPaciente);
+       botaoVerCadastrados = findViewById(R.id.botaoVerCadastrados);
 
         botaoNovoPaciente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Acompanhamento.this, NovoPaciente.class);
+                startActivity(intent);
+            }
+        });
+
+        botaoVerCadastrados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Acompanhamento.this, PacientesCadastrados.class);
                 startActivity(intent);
             }
         });

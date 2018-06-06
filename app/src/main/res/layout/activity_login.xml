@@ -80,6 +80,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sou um novo administrador!"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:clickable="true"
                 android:gravity="center"
                 android:textSize="16dp"

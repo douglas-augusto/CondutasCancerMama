@@ -21,15 +21,18 @@
         <activity
             android:name=".activity.activity.CondutasMenos40"
             android:windowSoftInputMode="stateHidden" />
-        />
         <activity android:name=".activity.activity.Resultados" />
         <activity android:name=".activity.activity.Fluxogramas" />
         <activity android:name=".activity.activity.FluxogramaResultados" />
         <activity android:name=".activity.activity.FluxogramaCondutas" />
         <activity android:name=".activity.activity.Login" />
         <activity android:name=".activity.activity.Acompanhamento" />
-        <activity android:name=".activity.activity.NovoPaciente" />
-        <activity android:name=".activity.activity.NovoUsuario" />
+        <activity
+            android:name=".activity.activity.NovoPaciente"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.activity.NovoUsuario"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activity.activity.PacientesCadastrados"></activity>
     </application>
 

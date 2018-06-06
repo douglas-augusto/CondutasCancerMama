@@ -32,6 +32,8 @@ public class NovoPaciente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_paciente);
 
+        setTitle("Novo paciente");
+
         usuarioFirebase = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         nome = findViewById(R.id.campoNomePaciente);

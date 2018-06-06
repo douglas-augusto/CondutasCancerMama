@@ -12,7 +12,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="405dp"
+        android:layout_width="wrap_content"
         android:layout_height="201dp"
         app:srcCompat="@drawable/image3" />
 
@@ -45,7 +45,7 @@
         android:textStyle="bold|italic" />
 
         <TextView
-            android:layout_width="334dp"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingTop="40dp"
@@ -94,18 +94,19 @@
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="225dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:text="• A3 - Histórico familiar de câncer de mama:"
-        android:textColor="@color/pink"
-        android:textSize="24dp"
-        android:textStyle="bold|italic" />
 
         <TextView
-            android:layout_width="334dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="• A3 - Histórico familiar de câncer de mama:"
+            android:textColor="@color/pink"
+            android:textSize="24dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:paddingLeft="10dp"
@@ -115,7 +116,7 @@
 
         <EditText
             android:id="@+id/campoIdade"
-            android:layout_width="335dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="115dp"
             android:ems="10"
