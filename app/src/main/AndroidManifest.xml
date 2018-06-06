@@ -29,7 +29,8 @@
         <activity android:name=".activity.activity.Login" />
         <activity android:name=".activity.activity.Acompanhamento" />
         <activity android:name=".activity.activity.NovoPaciente" />
-        <activity android:name=".activity.activity.NovoUsuario"></activity>
+        <activity android:name=".activity.activity.NovoUsuario" />
+        <activity android:name=".activity.activity.PacientesCadastrados"></activity>
     </application>
 
 </manifest>

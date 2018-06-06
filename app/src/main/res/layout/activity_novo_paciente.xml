@@ -1,9 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.activity.NovoPaciente">
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:background="#fd4e5e"
+    android:paddingRight="24dp"
+    android:paddingLeft="24dp">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_assignment_ind" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/campoNomePaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Nome"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fe97a0" />
+
+            <EditText
+                android:id="@+id/campoInscricaoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Numero de inscrição"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fe97a0" />
+
+            <EditText
+                android:id="@+id/campoNascimentoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Data de nascimento"
+                android:inputType="date"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fa97a0" />
+
+            <EditText
+                android:id="@+id/campoSexoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Sexo"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fa97a0" />
+
+            <EditText
+                android:id="@+id/campoMunicipioPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Municipio de Residência"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fa97a0" />
+
+            <EditText
+                android:id="@+id/campoEstadoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Estado"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="#fa97a0" />
+
+            <Button
+                android:id="@+id/botaoCadastrarPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bkgd_red_2"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="Cadastrar"
+                android:textAllCaps="false"
+                android:textColor="#f16371"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

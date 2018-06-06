@@ -15,7 +15,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:padding="4dp"
-                android:src="@drawable/ic_directions_bike_black_24dp" />
+                android:src="@drawable/ic_assessment" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="2dp"
-                android:text="Bike App"
+                android:text="Acompanhamento"
                 android:textColor="#fff"
                 android:textSize="24sp"
                 android:textStyle="bold" />

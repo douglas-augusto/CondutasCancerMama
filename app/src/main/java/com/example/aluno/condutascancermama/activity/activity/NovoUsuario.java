@@ -27,6 +27,7 @@ public class NovoUsuario extends AppCompatActivity {
     private EditText campoNome;
     private EditText campoEmail;
     private EditText campoSenha;
+    private EditText repetirSenha;
     private Button botaoCadastrar;
     private Usuario usuario;
 
@@ -43,26 +44,29 @@ public class NovoUsuario extends AppCompatActivity {
 
         setTitle("Novo Administrador");
 
-        campoNome =         (EditText) findViewById(R.id.campo_nome_cadastro);
-        campoEmail =        (EditText) findViewById(R.id.campo_email_cadastro);
-        campoSenha =        (EditText) findViewById(R.id.campo_senha_cadastro);
-        botaoCadastrar =    (Button) findViewById(R.id.botao_cadastrar_usuario);
+        campoNome = findViewById(R.id.campo_nome_cadastro);
+        campoEmail = findViewById(R.id.campo_email_cadastro);
+        campoSenha = findViewById(R.id.campo_senha_cadastro);
+        repetirSenha = findViewById(R.id.campo_repetir_senha);
+        botaoCadastrar = findViewById(R.id.botao_cadastrar_usuario);
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(campoNome.getText().toString().equals("") || campoEmail.getText().toString().equals("") || campoSenha.getText().toString().equals("")){
+                if(campoNome.getText().toString().equals("") || campoEmail.getText().toString().equals("") || campoSenha.getText().toString().equals("") || repetirSenha.getText().toString().equals("")){
 
                     Toast.makeText(NovoUsuario.this, "Todos os campos são obrigatórios!", Toast.LENGTH_LONG).show();
 
-                } else {
+                } else if (campoSenha.getText().toString().equals(repetirSenha.getText().toString())) {
 
                     usuario = new Usuario();
                     usuario.setNome(campoNome.getText().toString());
                     usuario.setEmail(campoEmail.getText().toString());
                     usuario.setSenha(campoSenha.getText().toString());
                     cadastrarUsuario();
+                }else{
+                    Toast.makeText(NovoUsuario.this, "As senhas digitadas não são iguais!", Toast.LENGTH_LONG).show();
                 }
 
             }
