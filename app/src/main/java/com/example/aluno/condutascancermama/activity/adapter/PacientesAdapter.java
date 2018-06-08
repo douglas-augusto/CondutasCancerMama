@@ -38,11 +38,11 @@ public class PacientesAdapter extends ArrayAdapter<Paciente> {
             view = inflater.inflate(R.layout.lista_pacientes, parent, false);
 
             TextView nomePaciente = (TextView) view.findViewById(R.id.tv_nome);
-            TextView municipioPaciente = (TextView) view.findViewById(R.id.tv_email);
+            TextView incricaoPaciente = (TextView) view.findViewById(R.id.tv_email);
 
             Paciente paciente = pacientes.get(position);
             nomePaciente.setText(paciente.getNome());
-            municipioPaciente.setText((paciente.getMunicipio()));
+            incricaoPaciente.setText("N° inscrição: "+paciente.getInscricao() + "  Município: "+paciente.getMunicipio());
 
         }
 

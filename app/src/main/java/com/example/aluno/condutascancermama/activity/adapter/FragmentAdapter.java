@@ -8,7 +8,7 @@ import com.example.aluno.condutascancermama.activity.fragment.PacienteFragment;
 
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 
-    private String[] tituloAbas = {"PACIENTES"};
+    private String[] tituloAbas = {"LISTA DE PACIENTES"};
 
     public FragmentAdapter(FragmentManager fm) {
         super(fm);

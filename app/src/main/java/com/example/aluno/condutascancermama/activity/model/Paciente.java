@@ -20,10 +20,10 @@ public class Paciente {
 
     public void salvarPaciente(){
 
-        String localCodificado = Base64Custom.codificarBase64(getNome());
+        String incricaoCodificado = Base64Custom.codificarBase64(getInscricao());
 
         DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFirebase();
-        referenciaFirebase.child("pacientes").child(getId()).child(localCodificado).setValue(this);
+        referenciaFirebase.child("pacientes").child(getId()).child(incricaoCodificado).setValue(this);
 
     }
 

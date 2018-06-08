@@ -29,11 +29,13 @@
         <activity android:name=".activity.activity.Acompanhamento" />
         <activity
             android:name=".activity.activity.NovoPaciente"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.activity.NovoUsuario"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".activity.activity.PacientesCadastrados"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.activity.PacientesCadastrados" />
+        <activity android:name=".activity.activity.PacienteActivity" />
+        <activity android:name=".activity.activity.NovoExame"></activity>
     </application>
 
 </manifest>

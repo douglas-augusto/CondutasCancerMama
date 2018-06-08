@@ -1,14 +1,17 @@
 package com.example.aluno.condutascancermama.activity.fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.aluno.condutascancermama.R;
+import com.example.aluno.condutascancermama.activity.activity.PacienteActivity;
 import com.example.aluno.condutascancermama.activity.adapter.PacientesAdapter;
 import com.example.aluno.condutascancermama.activity.config.ConfiguracaoFirebase;
 import com.example.aluno.condutascancermama.activity.helper.Preferencias;
@@ -90,6 +93,28 @@ public class PacienteFragment extends android.support.v4.app.Fragment{
 
             }
         };
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getActivity(), PacienteActivity.class);
+
+                // recupera dados a serem passados
+                Paciente paciente = pacientes.get(position);
+
+                // enviando dados para conversa activity
+                intent.putExtra("nome", paciente.getNome() );
+                intent.putExtra("inscricao", paciente.getInscricao() );
+                intent.putExtra("nascimento", paciente.getNascimento());
+                intent.putExtra("sexo", paciente.getSexo());
+                intent.putExtra("municipio",paciente.getMunicipio());
+                intent.putExtra("estado",paciente.getEstado());
+
+                startActivity(intent);
+
+            }
+        });
 
         return view;
     }

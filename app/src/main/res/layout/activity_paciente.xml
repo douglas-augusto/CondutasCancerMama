@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.activity.PacienteActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="195dp"
+        app:srcCompat="@drawable/image1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nomePaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/nascimentoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/incricaoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/municipioPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/sexoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/estadoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="18dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#CCCCCC" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/botaoCadastrarExames"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_signup"
+                android:text="Cadastrar novo exame"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:clickable="true"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/botaoHistoricoExames"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_signup"
+                android:text="Histórico de exames"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:clickable="true"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
