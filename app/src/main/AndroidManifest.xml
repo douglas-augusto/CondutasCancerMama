@@ -35,7 +35,9 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.activity.PacientesCadastrados" />
         <activity android:name=".activity.activity.PacienteActivity" />
-        <activity android:name=".activity.activity.NovoExame"></activity>
+        <activity
+            android:name=".activity.activity.NovoExame"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>
