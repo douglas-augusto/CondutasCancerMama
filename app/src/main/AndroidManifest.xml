@@ -37,7 +37,8 @@
         <activity android:name=".activity.activity.PacienteActivity" />
         <activity
             android:name=".activity.activity.NovoExame"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.activity.HistoricoExames"></activity>
     </application>
 
 </manifest>

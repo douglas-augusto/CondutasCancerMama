@@ -14,6 +14,7 @@ public class Exame {
     private String resultado;
     private String observacao;
 
+
     public Exame() {
     }
 

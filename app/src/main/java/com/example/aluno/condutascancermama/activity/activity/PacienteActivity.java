@@ -66,6 +66,9 @@ public class PacienteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PacienteActivity.this, NovoExame.class );
+                Bundle bundle = new Bundle();
+                bundle.putString("inscricao", inscricao);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
