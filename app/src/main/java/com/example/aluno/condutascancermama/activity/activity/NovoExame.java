@@ -65,6 +65,8 @@ public class NovoExame extends AppCompatActivity {
 
                     exame.salvar();
 
+                    Toast.makeText(NovoExame.this, "Exame cadastrado com sucesso!", Toast.LENGTH_LONG).show();
+
                     finish();
                 }
 
