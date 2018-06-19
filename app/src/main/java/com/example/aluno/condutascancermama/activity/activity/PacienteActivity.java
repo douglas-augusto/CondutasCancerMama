@@ -1,7 +1,9 @@
 package com.example.aluno.condutascancermama.activity.activity;
 
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,7 @@ public class PacienteActivity extends AppCompatActivity {
     private Button botaoApagarPaciente;
     private DatabaseReference reference;
     private FirebaseAuth usuarioFirebase;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,10 +103,27 @@ public class PacienteActivity extends AppCompatActivity {
         botaoApagarPaciente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String pacienteAtual = Base64Custom.codificarBase64(inscricao);
-                String usuarioAtual = Base64Custom.codificarBase64(usuarioFirebase.getCurrentUser().getEmail());
-                reference.child("pacientes").child(usuarioAtual).child(pacienteAtual).removeValue();
-                finish();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(PacienteActivity.this);
+                builder.setTitle("Confirmação");
+                builder.setMessage("Deseja mesmo apagar esse registro?");
+                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        String pacienteAtual = Base64Custom.codificarBase64(inscricao);
+                        String usuarioAtual = Base64Custom.codificarBase64(usuarioFirebase.getCurrentUser().getEmail());
+                        reference.child("pacientes").child(usuarioAtual).child(pacienteAtual).removeValue();
+                        finish();
+                    }
+                });
+
+                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+
+                    }
+                });
+
+                alerta = builder.create();
+                alerta.show();
             }
         });
     }

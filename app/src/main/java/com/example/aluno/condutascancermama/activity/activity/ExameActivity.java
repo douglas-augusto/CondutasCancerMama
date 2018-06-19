@@ -31,6 +31,7 @@ public class ExameActivity extends AppCompatActivity {
     private String observacao;
     private Button botaoApagarExame;
     private DatabaseReference reference;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,12 +72,26 @@ public class ExameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ExamePreferencias preferencias = new ExamePreferencias(ExameActivity.this);
-                String pacienteAtual = Base64Custom.codificarBase64(preferencias.getIdentificador());
-                String exameAtual = Base64Custom.codificarBase64(data);
-                reference.child("exames").child(pacienteAtual).child(exameAtual).removeValue();
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(ExameActivity.this);
+                builder.setTitle("Confirmação");
+                builder.setMessage("Deseja mesmo apagar esse registro?");
+                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        ExamePreferencias preferencias = new ExamePreferencias(ExameActivity.this);
+                        String pacienteAtual = Base64Custom.codificarBase64(preferencias.getIdentificador());
+                        String exameAtual = Base64Custom.codificarBase64(data);
+                        reference.child("exames").child(pacienteAtual).child(exameAtual).removeValue();
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
 
+                    }
+                });
+
+                alerta = builder.create();
+                alerta.show();
             }
         });
 
