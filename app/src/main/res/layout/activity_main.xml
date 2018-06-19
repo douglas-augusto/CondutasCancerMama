@@ -118,14 +118,14 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundpink"
-                    android:src="@drawable/ic_control_point_black_24dp"
+                    android:src="@drawable/ic_info_outline"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Encaminhar"/>
+                    android:text="Sobre"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Registrar paciente na lista de consulta"
+                    android:text="Mais informações sobre o aplicativo"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -160,7 +160,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundpink"
                     android:padding="10dp"
-                    android:src="@drawable/ic_info_outline" />
+                    android:src="@drawable/ic_control_point_black_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"

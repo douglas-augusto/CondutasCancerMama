@@ -113,6 +113,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/botaoApagarPaciente"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/background_signup"
                 android:text="Apagar esse paciente"
                 android:textColor="#fff"
