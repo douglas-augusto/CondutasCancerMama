@@ -9,10 +9,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.aluno.condutascancermama.R;
+import com.example.aluno.condutascancermama.activity.config.ConfiguracaoFirebase;
 import com.example.aluno.condutascancermama.activity.fragment.ExameFragment;
+import com.example.aluno.condutascancermama.activity.helper.Base64Custom;
 import com.example.aluno.condutascancermama.activity.helper.ExamePreferencias;
 import com.example.aluno.condutascancermama.activity.helper.Preferencias;
 import com.example.aluno.condutascancermama.activity.model.Paciente;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 public class PacienteActivity extends AppCompatActivity {
 
@@ -30,11 +34,17 @@ public class PacienteActivity extends AppCompatActivity {
     private String estado;
     private Button botaoCadastraExame;
     private Button botaoVerExames;
+    private Button botaoApagarPaciente;
+    private DatabaseReference reference;
+    private FirebaseAuth usuarioFirebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paciente);
+
+        reference = ConfiguracaoFirebase.getFirebase();
+        usuarioFirebase = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         nomePaciente = findViewById(R.id.nomePaciente);
         inscricaoPaciente = findViewById(R.id.incricaoPaciente);
@@ -44,6 +54,7 @@ public class PacienteActivity extends AppCompatActivity {
         estadoPaciente = findViewById(R.id.estadoPaciente);
         botaoCadastraExame = findViewById(R.id.botaoCadastrarExames);
         botaoVerExames = findViewById(R.id.botaoHistoricoExames);
+        botaoApagarPaciente = findViewById(R.id.botaoApagarPaciente);
 
         setTitle("Dados do paciente");
 
@@ -83,6 +94,16 @@ public class PacienteActivity extends AppCompatActivity {
                 preferencias.salvarDados(inscricao, inscricao);
                 Intent intent = new Intent(PacienteActivity.this, HistoricoExames.class);
                 startActivity(intent);
+            }
+        });
+
+        botaoApagarPaciente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pacienteAtual = Base64Custom.codificarBase64(inscricao);
+                String usuarioAtual = Base64Custom.codificarBase64(usuarioFirebase.getCurrentUser().getEmail());
+                reference.child("pacientes").child(usuarioAtual).child(pacienteAtual).removeValue();
+                finish();
             }
         });
     }

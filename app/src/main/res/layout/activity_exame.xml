@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.activity.PacienteActivity">
+    tools:context=".activity.activity.ExameActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,7 +26,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/nomePaciente"
+                android:id="@+id/nomeExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
@@ -34,7 +34,7 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/nascimentoPaciente"
+                android:id="@+id/dataExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -42,7 +42,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/incricaoPaciente"
+                android:id="@+id/medicoExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -50,7 +50,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/municipioPaciente"
+                android:id="@+id/localExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -58,7 +58,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/sexoPaciente"
+                android:id="@+id/resultadoExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -66,7 +66,7 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/estadoPaciente"
+                android:id="@+id/observacaoExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -81,10 +81,10 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:id="@+id/botaoCadastrarExames"
+                android:id="@+id/botaoApagarExame"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_signup"
-                android:text="Cadastrar novo exame"
+                android:text="Apagar esse registro"
                 android:textColor="#fff"
                 android:textAllCaps="false"
                 android:textStyle="normal"
@@ -94,35 +94,6 @@
                 android:clickable="true"
                 android:layout_marginTop="20dp"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:id="@+id/botaoHistoricoExames"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_signup"
-                android:text="Histórico de exames"
-                android:textColor="#fff"
-                android:textAllCaps="false"
-                android:textStyle="normal"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="18sp"
-                android:padding="14dp"
-                android:clickable="true"
-                android:layout_marginTop="10dp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:id="@+id/botaoApagarPaciente"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_signup"
-                android:text="Apagar esse paciente"
-                android:textColor="#fff"
-                android:textAllCaps="false"
-                android:textStyle="normal"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="18sp"
-                android:padding="14dp"
-                android:clickable="true"
-                android:layout_marginTop="10dp"/>
         </LinearLayout>
     </ScrollView>
 

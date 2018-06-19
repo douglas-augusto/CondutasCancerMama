@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.aluno.condutascancermama.R;
+import com.example.aluno.condutascancermama.activity.activity.ExameActivity;
 import com.example.aluno.condutascancermama.activity.adapter.ExameAdapter;
 import com.example.aluno.condutascancermama.activity.config.ConfiguracaoFirebase;
 import com.example.aluno.condutascancermama.activity.helper.Base64Custom;
@@ -30,7 +31,6 @@ public class ExameFragment extends android.support.v4.app.Fragment {
     private ArrayList<Exame> exames;
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerExames;
-    private String pacienteId;
 
     public ExameFragment(){}
 
@@ -94,23 +94,27 @@ public class ExameFragment extends android.support.v4.app.Fragment {
             }
         };
 
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(getActivity(), PacienteActivity.class);
+                Intent intent = new Intent(getActivity(), ExameActivity.class);
 
                 // recupera dados a serem passados
                 Exame exame = exames.get(position);
 
                 // enviando dados para conversa activity
-                //intent.putExtra("nome", paciente.getNome() );
-
+                intent.putExtra("nome", exame.getNome() );
+                intent.putExtra("data", exame.getData() );
+                intent.putExtra("medico", exame.getMedico() );
+                intent.putExtra("local", exame.getLocal() );
+                intent.putExtra("resultado", exame.getResultado() );
+                intent.putExtra("observacao", exame.getObservacao() );
 
                 startActivity(intent);
 
             }
-        });*/
+        });
 
         return view;
     }

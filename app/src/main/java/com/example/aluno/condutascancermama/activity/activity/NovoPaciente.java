@@ -26,7 +26,6 @@ public class NovoPaciente extends AppCompatActivity {
     private FirebaseAuth usuarioFirebase;
     private Paciente paciente;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
