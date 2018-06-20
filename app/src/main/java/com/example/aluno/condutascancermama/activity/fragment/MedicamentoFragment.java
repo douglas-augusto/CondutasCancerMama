@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.aluno.condutascancermama.R;
 import com.example.aluno.condutascancermama.activity.activity.ExameActivity;
+import com.example.aluno.condutascancermama.activity.activity.MedicamentoActivity;
 import com.example.aluno.condutascancermama.activity.adapter.ExameAdapter;
 import com.example.aluno.condutascancermama.activity.adapter.MedicamentoAdapter;
 import com.example.aluno.condutascancermama.activity.config.ConfiguracaoFirebase;
@@ -104,7 +105,7 @@ public class MedicamentoFragment extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(getActivity(), ExameActivity.class);
+                Intent intent = new Intent(getActivity(), MedicamentoActivity.class);
 
                 // recupera dados a serem passados
                 Medicamento medicamento = medicamentos.get(position);

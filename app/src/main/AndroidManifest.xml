@@ -44,7 +44,8 @@
         <activity android:name=".activity.activity.MedicamentoLogin" />
         <activity android:name=".activity.activity.NovoUsuarioMedicamento" />
         <activity android:name=".activity.activity.NovoMedicamento" />
-        <activity android:name=".activity.activity.MeusMedicamentos"></activity>
+        <activity android:name=".activity.activity.MeusMedicamentos" />
+        <activity android:name=".activity.activity.MedicamentoActivity"></activity>
     </application>
 
 </manifest>
