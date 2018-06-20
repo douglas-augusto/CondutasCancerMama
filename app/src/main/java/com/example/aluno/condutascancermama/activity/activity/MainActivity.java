@@ -16,15 +16,17 @@ public class MainActivity extends AppCompatActivity {
     private CardView botaoCondutas;
     private CardView botaoFluxograma;
     private CardView botaoAcompanhar;
+    private CardView botaoMedicamentos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        botaoCondutas = (CardView) findViewById(R.id.condutasId);
-        botaoFluxograma = (CardView) findViewById(R.id.botaoFluxograma);
-        botaoAcompanhar = (CardView) findViewById(R.id.botaoAcompanhamento);
+        botaoCondutas = findViewById(R.id.condutasId);
+        botaoFluxograma =  findViewById(R.id.botaoFluxograma);
+        botaoAcompanhar = findViewById(R.id.botaoAcompanhamento);
+        botaoMedicamentos = findViewById(R.id.botaoTelaMedicamentos);
 
         botaoCondutas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        botaoMedicamentos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MedicamentoLogin.class);
                 startActivity(intent);
             }
         });

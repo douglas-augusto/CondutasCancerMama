@@ -39,7 +39,12 @@
             android:name=".activity.activity.NovoExame"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.activity.HistoricoExames" />
-        <activity android:name=".activity.activity.ExameActivity"></activity>
+        <activity android:name=".activity.activity.ExameActivity" />
+        <activity android:name=".activity.activity.MedicamentoMain" />
+        <activity android:name=".activity.activity.MedicamentoLogin" />
+        <activity android:name=".activity.activity.NovoUsuarioMedicamento" />
+        <activity android:name=".activity.activity.NovoMedicamento" />
+        <activity android:name=".activity.activity.MeusMedicamentos"></activity>
     </application>
 
 </manifest>
