@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".activity.activity.PacienteActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="195dp"
+        android:layout_width="600dp"
+        android:layout_height="198dp"
         app:srcCompat="@drawable/image1" />
 
     <ScrollView
